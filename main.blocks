@@ -1,0 +1,52 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="N+I|X9m=D7%3Y9iyL)GT">Player</variable><variable type="KIND_SpriteKind" id="3CYHH0;=:M=i{1[owanK">Projectile</variable><variable type="KIND_SpriteKind" id="4KEhWd;J@W*!2yV-%,@P">Food</variable><variable type="KIND_SpriteKind" id="DhJN~L@=gq-C/v-3Go@Z">Enemy</variable><variable id="1|LG.}|/EU)T[M~(z}6V">mySprite</variable><variable id="^/{fvnJs_y0)VwOg6M2Q">demo flying star</variable><variable id="f4Aw6GL8+;sft?ADOWsA">projectile2</variable><variable id="_,NtEpg]jB7^v)o6p,`N">princess</variable><variable id="Fr,,cMGSA!/}k%%(|r0S">projectile</variable></variables><block type="pxt-on-start" id="q{{49$hC5e(+$,g)anma" x="10" y="0"><statement name="HANDLER"><block type="variables_set" id="G]=cHw]$:E7I#6OcWFU_"><field name="VAR" id="_,NtEpg]jB7^v)o6p,`N">princess</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="vH(5+k#J[qDS/Dv(;OS9"><value name="img"><shadow type="screen_image_picker" id="~?(fa-:,/v!7BOO!CKR]"><field name="img">img`
+. . . . . . 5 . 5 . . . . . . . 
+. . . . . f 5 5 5 f f . . . . . 
+. . . . f 1 5 2 5 1 6 f . . . . 
+. . . f 1 6 6 6 6 6 1 6 f . . . 
+. . . f 6 6 f f f f 6 1 f . . . 
+. . . f 6 f f d d f f 6 f . . . 
+. . f 6 f d f d d f d f 6 f . . 
+. . f 6 f d 3 d d 3 d f 6 f . . 
+. . f 6 6 f d d d d f 6 6 f . . 
+. f 6 6 f 3 f f f f 3 f 6 6 f . 
+. . f f d 3 5 3 3 5 3 d f f . . 
+. . f d d f 3 5 5 3 f d d f . . 
+. . . f f 3 3 3 3 3 3 f f . . . 
+. . . f 3 3 5 3 3 5 3 3 f . . . 
+. . . 3 3 3 3 3 3 3 3 3 3 . . . 
+. . . . . d d . . d d . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="#u:HZTq7bvuF})v)z/I%"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id=":6kkkU{|8W%h(fJH?WBH"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="ik8?JH6VXS`*icKyB(*3"><field name="VAR" id="_,NtEpg]jB7^v)o6p,`N">princess</field></block></value></block></next></block></statement></block><block type="gameinterval" id=")VO;9af^W1yR,G}y:%Qz" x="0" y="230"><value name="period"><shadow type="timePicker" id="$OPtV?~k=Qy@/KiiR,G;"><field name="ms">500</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="!y*0*a1qsSPbmy=~6WnM"><field name="VAR" id="^/{fvnJs_y0)VwOg6M2Q">demo flying star</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="5k/Wyp!6bsWkwMe^d)5B"><value name="img"><shadow type="screen_image_picker" disabled="true"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow><block type="screen_image_picker" id="knUSKw03,g5E@TGDZcM|"><field name="img">img`
+. . . . . . 1 1 . . . . . . . . 
+. . . . . 1 1 5 4 . . . . . . . 
+. . . . 1 1 5 5 5 4 . . . . . . 
+. . . . 1 5 5 5 5 5 4 . . . . . 
+. . . 1 1 5 5 5 5 5 4 . . . . . 
+1 1 1 1 5 5 5 5 5 5 5 4 4 4 4 4 
+1 5 5 5 5 5 5 5 5 5 5 5 5 5 5 4 
+1 5 5 5 5 5 5 5 5 5 5 5 5 5 5 4 
+. 1 1 5 5 5 5 5 5 5 5 5 5 4 4 . 
+. 1 1 5 5 5 5 5 5 5 5 5 5 4 . . 
+. 1 5 5 5 5 5 5 5 5 5 5 5 4 . . 
+1 1 5 5 5 5 4 . . 5 5 5 5 4 . . 
+1 5 5 5 5 4 . . . . 5 5 5 5 4 . 
+1 5 5 5 4 . . . . . . 5 5 5 5 4 
+1 5 5 4 . . . . . . . . . 5 5 4 
+1 1 . . . . . . . . . . . . . . 
+`</field></block></value><value name="sprite"><block type="variables_get" id="n]g9$fze$TwJ13)rHQbt"><field name="VAR" id="_,NtEpg]jB7^v)o6p,`N">princess</field></block></value><value name="vx"><shadow type="spriteSpeedPicker"><field name="speed">50</field></shadow><block type="device_random" id="[{-F@Y30gBAq)])oYqi6"><value name="min"><shadow type="math_number" id="@:Sy^O,Z!Ed[KT/LW^e/"><field name="NUM">-100</field></shadow></value><value name="limit"><shadow type="math_number" id="CS5TH@|9e{Z_.KQllD-;"><field name="NUM">100</field></shadow></value></block></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">50</field></shadow><block type="device_random" id="vsF|mJaxp0A|yuQc!3;Z"><value name="min"><shadow type="math_number" id=".XoU;2NWzV*C!i=4C}oQ"><field name="NUM">-100</field></shadow></value><value name="limit"><shadow type="math_number" id="}|%lm;1B8EL-XLK*Vy^c"><field name="NUM">100</field></shadow></value></block></value></block></value><next><block type="spritesetsetflag" id="4F}+l?v}WgPI]1gk#q%^"><field name="flag">SpriteFlag.AutoDestroy</field><comment>To not slow down the game and destroys sprite when off screen</comment><value name="sprite"><block type="variables_get" id="taQ53G$(7w~0:0U{m5pd"><field name="VAR" id="^/{fvnJs_y0)VwOg6M2Q">demo flying star</field></block></value><value name="on"><shadow type="toggleOnOff" id="^VNOLvtvL{qiK9vILsrg"><field name="on">true</field></shadow></value></block></next></block></statement></block></xml>
